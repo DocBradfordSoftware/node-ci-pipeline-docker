@@ -8,3 +8,11 @@ services:
     volumes:
       - ./data/mongo:/data/db
     restart: always
+
+  jenkins:
+    image: jenkins:2.19.4-alpine
+    ports:
+      - "9090:8080"
+    volumes:
+      - ./data/jenkins:/var/jenkins_home
+    restart: always
